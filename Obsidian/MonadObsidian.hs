@@ -1,9 +1,3 @@
-{-# OPTIONS -fglasgow-exts #-}
-{-
-  Joel Svensson 
-  Last edited 2011
--}
-
 
 module Obsidian.MonadObsidian
        (module Obsidian.MonadObsidian.Exp,

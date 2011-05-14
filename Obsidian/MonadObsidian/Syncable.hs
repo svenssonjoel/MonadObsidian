@@ -1,4 +1,6 @@
-{-# OPTIONS -fglasgow-exts #-}
+{-# LANGUAGE TypeSynonymInstances, 
+             FlexibleInstances, 
+             FlexibleContexts #-} 
 
 module Obsidian.MonadObsidian.Syncable where
 
@@ -18,6 +20,7 @@ class Syncable a where
     sync :: a -> GPU a
     commit :: a -> GPU a 
     
+
  
 instance TypeOf (Exp a) => Syncable (GArr (Exp a)) where
     sync arr = do

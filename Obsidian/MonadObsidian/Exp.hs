@@ -1,4 +1,5 @@
-{-# OPTIONS -fglasgow-exts #-}
+{-# LANGUAGE FlexibleInstances, 
+             TypeSynonymInstances #-} 
 
 module Obsidian.MonadObsidian.Exp where 
 

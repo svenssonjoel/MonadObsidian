@@ -1,10 +1,4 @@
-{-# OPTIONS -fglasgow-exts #-}
-{- 
-   Joel Svensson
-   
-   2008 April 24 ( Experimental )
--}
-
+{-# LANGUAGE FlexibleInstances #-} 
 module  Obsidian.MonadObsidian.Arr
        ( Arr(Arr),
          GArr, SArr, CArr,

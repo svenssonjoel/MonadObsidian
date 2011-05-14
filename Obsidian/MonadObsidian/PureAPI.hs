@@ -1,4 +1,5 @@
-{-# OPTIONS -XFlexibleContexts #-}
+{-# LANGUAGE FlexibleInstances, 
+             FlexibleContexts #-}
 
 module Obsidian.MonadObsidian.PureAPI where 
 

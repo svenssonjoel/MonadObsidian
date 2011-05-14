@@ -1,9 +1,4 @@
-{-# OPTIONS -fglasgow-exts #-}
-{-
-ObsCurr
-
--}
-   
+{-# LANGUAGE FlexibleContexts #-} 
 
 module  Obsidian.MonadObsidian.API 
         ((->-), 
@@ -16,6 +11,8 @@ module  Obsidian.MonadObsidian.API
          iter,  --
          iter2,
          fmap,
+         cache,
+         wb,
         
          -- two, ilv, parl,
          -- evens, evens2, odds,
@@ -50,6 +47,15 @@ infixl 8 ->>-
 
 (->-) :: Monad m => (a -> m b) -> (b -> m c) -> a -> m c
 (->-) = (>=>)
+
+cache :: GArr a -> GPU (SArr a)
+cache arr = return $ mkArray (\ix -> arr ! ix) (len arr)
+ 
+
+wb :: SArr a -> GPU (GArr a)
+wb arr  = return $ mkArray (\ix -> arr ! ix) (len arr)
+
+
 
 threads_maximum = 1024
 

@@ -1,6 +1,3 @@
-{-# OPTIONS -XFlexibleContexts              
-            -XTypeSynonymInstances #-}
-
 module Test where
 
 import Obsidian.MonadObsidian
@@ -12,13 +9,6 @@ import qualified Data.Set as Set
 import qualified Data.Map as Map
 
 import Control.Monad.State
-
-cache :: GArr a -> GPU (SArr a)
-cache arr = return $ mkArray (\ix -> arr ! ix) (len arr)
- 
-
-wb :: SArr a -> GPU (GArr a)
-wb arr  = return $ mkArray (\ix -> arr ! ix) (len arr)
 
 
 kernel :: Syncable (GArr b) => 

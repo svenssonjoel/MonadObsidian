@@ -1,4 +1,5 @@
-{-# OPTIONS -fglasgow-exts #-}
+{-# LANGUAGE  FlexibleInstances, 
+              FlexibleContexts #-}
 -- -----------------------------------------------------------------------------
 
 module Obsidian.MonadObsidian.GenCuda where 
