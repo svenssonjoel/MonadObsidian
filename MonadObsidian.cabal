@@ -1,0 +1,47 @@
+Name: MonadObsidian
+Version: 0.1
+
+License:      BSD3 
+License-file: LICENSE
+Stability:    Experimental
+Maintainer:   Joel Svensson<svensson.bj@gmail.com>
+Author:       Joel Svensson<svensson.bj@gmail.com>
+
+Copyright:    Copyright (c) 2008 - 2011 Joel Svensson
+Synopsis:     Embedded GPU kernel language 
+HomePage:     
+Description: 
+  Domain Specific Embedded Language for GPU Kernel implementation
+
+
+Category: EDSL 
+Cabal-Version: >= 1.8
+Tested-With: GHC == 7.0.3
+
+build-type: Simple
+
+Library
+  build-depends: base >= 4 && < 5, haskell98
+               , mtl
+               , containers
+               , process
+               , filepath
+               , directory
+              
+
+  exposed-modules: Obsidian.MonadObsidian.Exp
+                 , Obsidian.MonadObsidian.PureAPI
+                 , Obsidian.MonadObsidian.API
+                 , Obsidian.MonadObsidian.IC
+                 , Obsidian.MonadObsidian.Printing
+                 , Obsidian.MonadObsidian.GenCuda
+                 , Obsidian.MonadObsidian.Syncable
+                 , Obsidian.MonadObsidian.Tools
+                 , Obsidian.MonadObsidian.Arr
+                 , Obsidian.MonadObsidian.GPUMonad
+
+  other-modules: Obsidian.MonadObsidian.Types
+              
+
+
+  GHC-Options: -O2 
