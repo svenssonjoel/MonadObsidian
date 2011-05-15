@@ -1,0 +1,3 @@
+* MonadObsidian
+  + Embedded DSL for implementation of GPU Kernels
+  + Generates CUDA kernels
